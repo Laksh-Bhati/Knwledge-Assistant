@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 
 #Read the .env file and load it's value as environment variables
-load_dotenv()
+load_dotenv(override=True)
 
 # --- Set the OpenAI API key from the environment variable ---
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
