@@ -11,6 +11,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 CHUNK_SIZE = 1000           #Character length of each chunk
 CHUNK_OVERLAP = 200         #Character between between chunks
 TOP_K = 5                   #Number of top results to return from the vector database
+MIN_SCORE = 0.3              #Minimum similarity score for a result to be considered relevant
 
 # --- Models ---
 EMBEDDING_MODEL = "text-embedding-3-small"  #Model used for generating embeddings
