@@ -8,7 +8,7 @@ load_dotenv(override=True)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # --- RAF Settings ---
-CHUNK_SIZE = 1000           #Character length of each chunk
+CHUNK_SIZE = 500           #Character length of each chunk
 CHUNK_OVERLAP = 200         #Character between between chunks
 TOP_K = 5                   #Number of top results to return from the vector database
 MIN_SCORE = 0.3              #Minimum similarity score for a result to be considered relevant
