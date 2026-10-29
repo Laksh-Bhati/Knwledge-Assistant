@@ -6,6 +6,7 @@ from src.config import CHROMA_DIR, COLLECTION_NAME, TOP_K
 from src.loader import load_document
 from src.chunker import chunk_pages
 from src.embeddings import embed_texts, embed_query
+from src.logger import logger
 
 
 def get_collection():
@@ -38,9 +39,18 @@ def add_chunks(chunks):
 
 def ingest_file(file_path):
     """Full ingestion pipeline for one file: load -> chunk -> embed -> store."""
-    pages = load_document(file_path)
-    chunks = chunk_pages(pages)
-    return add_chunks(chunks)
+    try:
+        pages = load_document(file_path)
+        chunks = chunk_pages(pages)
+        stored = add_chunks(chunks)
+        logger.info("Document processed successfully: %s chunk(s)", stored)
+        return stored
+    except Exception as exc:
+        logger.error(
+            "Document processing failed (%s)",
+            type(exc).__name__,
+        )
+        raise
 
 
 def search(question, top_k=TOP_K):

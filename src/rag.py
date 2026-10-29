@@ -4,6 +4,7 @@ from openai import AuthenticationError, RateLimitError, APIConnectionError, NotF
 from src.config import CHAT_MODEL, TOP_K, MIN_SCORE
 from src.embeddings import get_client
 from src.vectorstore import search
+from src.logger import logger
 
 NOT_FOUND = "I couldn't find this in the provided documents."
 
@@ -34,10 +35,12 @@ def answer_question(question, top_k=TOP_K):
 
     # 1. Retrieve
     hits = search(question, top_k)
+    logger.info("Question processed: %s retrieved chunks(s)", len(hits))
 
     # 2. Filter out weak matches (protection layer 1)
     relevant = [h for h in hits if h["score"] >= MIN_SCORE]
     if not relevant:
+        logger.info("No chunks passed the relevance threshold")
         return {"answer": NOT_FOUND, "sources": [], "used_llm": False}
 
     # 3. Build the prompt
@@ -56,6 +59,7 @@ def answer_question(question, top_k=TOP_K):
 
     # 5. Only show sources if the LLM actually answered
     sources = [] if NOT_FOUND in answer else relevant
+    logger.info("Answer generated Successfully")
     return {"answer": answer, "sources": sources, "used_llm": True}
 
 

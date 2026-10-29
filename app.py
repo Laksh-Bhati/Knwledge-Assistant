@@ -7,6 +7,7 @@ from openai import AuthenticationError, RateLimitError, APIConnectionError, NotF
 from src.config import OPENAI_API_KEY
 from src.vectorstore import ingest_file, count_chunks, clear_collection
 from src.rag import answer_question
+from src.logger import logger
 
 st.set_page_config(page_title="Enterprise Knowledge Assistant", page_icon="📚", layout="wide")
 
@@ -21,7 +22,8 @@ def explain_error(error):
         return "Could not reach OpenAI. Check your internet connection."
     if isinstance(error, NotFoundError):
         return "Model not found. Check CHAT_MODEL in config.py."
-    return f"Something went wrong: {error}"
+    logger.error("Unexpected error: (%s)", type(error).__name__)
+    return f"Something went wrong: Check the local application log for details."
 
 
 def show_sources(sources):
