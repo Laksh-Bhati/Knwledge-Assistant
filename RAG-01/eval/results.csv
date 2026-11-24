@@ -1,0 +1,23 @@
+question,should_answer,expected_page,top_page,top_score,retrieval_ok,keyword_ok,citation_ok,refused,used_llm,passed,answer
+How long do I have to submit expenses?,yes,2,2,0.551,True,True,True,False,True,True,- You must submit business expenses within 30 days of the expense date [1].
+What time should I arrive on my first day?,yes,,,0.487,True,True,True,False,True,True,- You should arrive at 9:00 AM on your first day [1].
+Where do I report on my first day?,yes,,,0.521,True,True,True,False,True,True,- Report to the reception desk on Floor 2 at 9:00 AM on your first day [1].
+What should I bring on my first day?,yes,,,0.482,True,True,True,False,True,True,- A government-issued photo ID [1].
+Which mandatory trainings must I complete?,yes,,,0.345,True,True,True,False,True,True,"- Information Security Basics
+- Code of Conduct
+- Workplace Safety [1]"
+Where do I collect my laptop?,yes,1,1,0.541,True,True,True,False,True,True,- You can collect your laptop from the IT Service Desk on Floor 4 [1].
+How long must my password be?,yes,1,1,0.388,True,True,True,False,True,True,Your password must be at least 14 characters long [1].
+How often must I change my password?,yes,1,1,0.354,True,True,True,False,True,True,You must change your password every 90 days [1].
+Who must approve my access requests?,yes,1,1,0.466,True,True,True,False,True,True,Your manager must approve every access request. [1]
+Do expense claims above 75 dollars need approval?,yes,2,2,0.586,True,True,True,False,True,True,"- Yes, expense claims above 75 dollars need your manager's approval before they can be paid [1]."
+Are alcohol purchases reimbursable?,yes,2,2,0.474,True,True,True,False,True,True,"- No, alcohol purchases are never reimbursable [1]."
+Can I book business class for a 4 hour flight?,yes,2,2,0.276,True,False,False,True,False,False,I couldn't find this in the provided documents.
+How do I escalate an unresolved IT ticket?,yes,3,3,0.583,True,True,True,False,True,True,- Reply to the ticket with the word ESCALATE if the issue is not resolved within 2 business days. [1]
+What is the emergency security extension?,yes,3,3,0.344,True,True,True,False,True,True,- The emergency security extension is 9999 [1].
+How quickly does HR respond to questions?,yes,3,3,0.472,True,True,True,False,True,True,"HR responds within 1 business day to questions such as leave, payroll, or benefits [1]."
+What is the annual bonus policy?,no,,2,0.266,,,,True,False,True,I couldn't find this in the provided documents.
+Can I work from home on Fridays?,no,,1,0.295,,,,True,False,True,I couldn't find this in the provided documents.
+Who is the CEO of Acme?,no,,,0.48,,,,True,True,True,I couldn't find this in the provided documents.
+What is the office dress code?,no,,,0.306,,,,True,True,True,I couldn't find this in the provided documents.
+What is the parking policy?,no,,3,0.216,,,,True,False,True,I couldn't find this in the provided documents.

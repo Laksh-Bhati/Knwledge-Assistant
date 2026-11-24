@@ -1,0 +1,21 @@
+question,expected_page,should_answer,keywords
+How long do I have to submit expenses?,2,yes,30
+What time should I arrive on my first day?,0,yes,9:00|9 am|9am
+Where do I report on my first day?,0,yes,floor 2|reception
+What should I bring on my first day?,0,yes,photo id|government
+Which mandatory trainings must I complete?,0,yes,information security|code of conduct|workplace safety
+Where do I collect my laptop?,1,yes,floor 4|it service desk
+How long must my password be?,1,yes,14
+How often must I change my password?,1,yes,90
+Who must approve my access requests?,1,yes,manager
+Do expense claims above 75 dollars need approval?,2,yes,manager
+Are alcohol purchases reimbursable?,2,yes,not|never
+Can I book business class for a 4 hour flight?,2,yes,economy
+How do I escalate an unresolved IT ticket?,3,yes,escalate
+What is the emergency security extension?,3,yes,9999
+How quickly does HR respond to questions?,3,yes,1 business day|one business day
+What is the annual bonus policy?,,no,
+Can I work from home on Fridays?,,no,
+Who is the CEO of Acme?,,no,
+What is the office dress code?,,no,
+What is the parking policy?,,no,
