@@ -1,9 +1,0 @@
-#Secrets: never commit
-.env
-#Virtual Environment (large, and specific to your laptop)
-.venv/
-#Generated files
-__pycache__/
-*.pyc
-logs/
-chroma_db/
